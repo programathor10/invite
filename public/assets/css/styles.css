@@ -20,6 +20,7 @@ body {
   align-items: center;
   justify-content: center;
   text-align: center;
+  margin-bottom: 30px;
 }
 
 .portada video {
@@ -64,9 +65,9 @@ body {
 }
 /* 1. Variables y fuentes */
 :root {
-  --color-primario: #6fb878; /* Dorado */
+  --color-primario: white; /* Dorado */
   --color-secundario: #fff;
-  --color-fondo: #8a8a8a;
+  --color-fondo: #9c7b7b;
 }
 
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap");
@@ -78,7 +79,7 @@ body {
 /* (Usa el código de portada de arriba) */
 
 /* 4. Secciones comunes */
-section {
+.informacion {
   padding: 4rem 2rem;
   background: var(--color-fondo);
   text-align: center;
@@ -89,11 +90,25 @@ section {
 h2 {
   font-size: 2.5rem;
   margin-bottom: 1.5rem;
-  color: var(--color-primario);
 }
 
 .info-detalles {
   margin: 1.5rem;
+}
+
+.banner-uno{
+  padding: 10px;
+  width: 100%;
+  background-color: var(--color-fondo);
+  text-align: center;
+}
+
+.ubicacion{
+  padding: 4rem 2rem;
+  background: var(--color-primario);
+  text-align: center;
+  padding: auto;
+  margin-bottom: 3rem;
 }
 
 /* 5. Formulario RSVP */
@@ -149,7 +164,7 @@ h2 {
 }
 
 .invitado {
-  background: #9c7b7b;
+  background: rgba(248, 248, 248, 0.29);
   padding: 1.5rem;
   border-radius: 8px;
   margin-bottom: 1.5rem;

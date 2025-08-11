@@ -1,123 +1,193 @@
 <!DOCTYPE html>
-<html lang="es"> <!-- Cambiado a "es" para contenido en español -->
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Invitación digital para los XV años de [Nombre]"> <!-- Meta descripción para SEO -->
-  <link rel="stylesheet" href="assets/css/styles.css" />
-  <title>Invitación XV Años | [Nombre]</title> <!-- Título descriptivo -->
-</head>
-<body>
-  <!-- PORTADA - Ahora es un <header> semántico -->
-  <header class="portada" role="banner"> <!-- role="banner" para accesibilidad -->
-    <video autoplay muted loop playsinline aria-label="Video de fondo de la invitación"> <!-- aria-label para descripción del video -->
-      <source src="https://cdn.pixabay.com/video/2024/02/13/200525-913022303_large.mp4" type="video/mp4" />
-      <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1200&q=80" alt="Portada de los XV años" />
-    </video>
-    <div class="contenido-portada">
-      <h1>¡Estás Invitado!</h1>
-      <p>Acompáñanos a celebrar un día especial</p>
-    </div>
-  </header>
-
-  <main> <!-- Contenido principal envuelto en <main> -->
-    <!-- SECCIÓN DE INFORMACIÓN -->
-    <section class="informacion" aria-labelledby="info-heading"> <!-- aria-labelledby para asociar h2 -->
-      <h2 id="info-heading">Cuando</h2>
-      <div class="info-detalles"> <!-- div para agrupar contenido relacionado -->
-        <p>6 de Diciembre de 2025</p>
-        <p>20:00 hrs</p>
-        <p>Salón de Eventos</p>
+<html lang="es">
+  <!-- Cambiado a "es" para contenido en español -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Invitación digital para los XV años de [Nombre]"
+    />
+    <!-- Meta descripción para SEO -->
+    <link rel="stylesheet" href="assets/css/styles.css" />
+    <title>Invitación XV Años | [Nombre]</title>
+    <!-- Título descriptivo -->
+  </head>
+  <body>
+    <!-- PORTADA - Ahora es un <header> semántico -->
+    <header class="portada" role="banner">
+      <!-- role="banner" para accesibilidad -->
+      <video
+        autoplay
+        muted
+        loop
+        playsinline
+        aria-label="Video de fondo de la invitación"
+      >
+        <!-- aria-label para descripción del video -->
+        <source
+          src="https://cdn.pixabay.com/video/2024/02/13/200525-913022303_large.mp4"
+          type="video/mp4"
+        />
+        <img
+          src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1200&q=80"
+          alt="Portada de los XV años"
+        />
+      </video>
+      <div class="contenido-portada">
+        <h1>¡Estás Invitado!</h1>
+        <p>Acompáñanos a celebrar un día especial</p>
       </div>
-      <a href="#rsvp" class="btn">Confirmar Asistencia</a> <!-- Mejor <a> que <button> si redirige -->
-    </section>
+    </header>
 
-    <!-- DRESS CODE -->
-    <section class="dresscode" aria-labelledby="dresscode-heading"> <!-- Sección independiente -->
-      <h2 id="dresscode-heading">Dress Code</h2>
-      <p>Vestimenta formal en tonos dorados y blancos</p>
-    </section>
-
-    <!-- FORMULARIO RSVP -->
-    <section class="formulario-rsvp">
-  <div class="container-elegante">
-    <h2>CONFIRMÁ TU ASISTENCIA</h2>
-    <p class="fecha-limite">ANTES DEL <strong>15 DE OCTUBRE</strong></p>
-    
-
-    <form id="rsvpForm" novalidate>
-      <div class="grupo-invitados">
-        <label>¿Por cuántas personas confirmarás?</label>
-        <select id="num-personas" name="num-personas" class="select-elegante">
-          <option value="1">1 persona</option>
-          <option value="2">2 personas</option>
-          <option value="3">3 personas</option>
-        </select>
-      </div>
-
-      <!-- Campos dinámicos para cada invitado -->
-      <div id="campos-invitados">
-        <div class="invitado">
-          <h3>Persona 1</h3>
-          <div class="form-group">
-            <label for="nombre1"></label>
-            <input type="text" id="nombre1" name="nombre1" required class="input-elegante" placeholder="Nombre">
-          </div>
-          <div class="form-group">
-            <label for="apellido1"></label>
-            <input type="text" id="apellido1" name="apellido1" required class="input-elegante" placeholder="Apellido">
-          </div>
-          <div class="form-group">
-            <label>¿Algún requerimiento en la alimentación?</label>
-            <select name="alimentacion1" class="select-elegante">
-              <option value="ninguno">Ninguno</option>
-              <option value="vegetariano">Vegetariano</option>
-              <option value="vegano">Vegano</option>
-              <option value="sin-gluten">Sin gluten</option>
-            </select>
-          </div>
-          
+    <main>
+      <!-- Contenido principal envuelto en <main> -->
+      <!-- SECCIÓN DE INFORMACIÓN -->
+      <section class="informacion" aria-labelledby="info-heading">
+        <!-- aria-labelledby para asociar h2 -->
+        <h2 id="info-heading">Cuando</h2>
+        <div class="info-detalles">
+          <!-- div para agrupar contenido relacionado -->
+          <p>6 de Diciembre de 2025</p>
+          <p>20:00 hrs</p>
+          <p>Salón de Eventos</p>
         </div>
-      </div>
-      <div class="form-group">
-            <label for="musica1">Recomendar música</label>
-            <input type="text" id="musica1" name="musica1" placeholder="Ej: Canción o artista" class="input-elegante">
-          </div>
+        <a href="#rsvpForm" class="btn">Confirmar Asistencia</a>
+        <!-- Mejor <a> que <button> si redirige -->
+      </section>
 
-      <button type="submit" class="btn-confirmar">Confirmar</button>
-    </form>
-  </div>
-</section>
-    <!-- UBICACIÓN -->
-    <section class="ubicacion" aria-labelledby="ubicacion-heading">
-      <h2 id="ubicacion-heading">Ubicación del Evento</h2>
-      <address> <!-- Etiqueta semántica para información de contacto -->
-        Salón de Eventos Las Gardenias<br>
-        Av. Principal 1234<br>
-        Ciudad, País
-      </address>
-      <div class="mapa" aria-hidden="true"> <!-- aria-hidden para elementos decorativos -->
-        <!-- iframe de Google Maps aquí -->
-      </div>
-    </section>
+      <!-- UBICACIÓN -->
+      <section class="ubicacion" aria-labelledby="ubicacion-heading">
+        <h2 id="ubicacion-heading">Ubicación del Evento</h2>
+        <address>
+          <!-- Etiqueta semántica para información de contacto -->
+          Salón de Eventos Las Gardenias<br />
+          Av. Principal 1234<br />
+          Ciudad, País
+        </address>
+        <div class="mapa" aria-hidden="true">
+          <!-- aria-hidden para elementos decorativos -->
+          <!-- iframe de Google Maps aquí -->
+        </div>
+      </section>
 
-    <!-- COUNTDOWN -->
-    <aside class="countdown" aria-labelledby="countdown-heading"> <!-- <aside> para contenido secundario -->
-      <h2 id="countdown-heading">Cuenta Regresiva</h2>
-      <div id="contador-dias" role="timer"> <!-- role="timer" para accesibilidad -->
-        Faltan <span id="dias-restantes">X</span> días para el evento.
-      </div>
-    </aside>
-  </main>
+      <section class="banner-uno">
+        <h3>Mis 15 Lua</h3>
+        <p>¡No te pierdas la celebración!</p>
+      </section>
 
-  <!-- MÚSICA - Mejor en footer -->
-  <footer class="musica" role="contentinfo">
-    <button id="toggle-music" aria-label="Reproducir/Pausar música de fondo">♪</button>
-    <audio id="background-music" loop>
-      <source src="assets/music/soundtrack.mp3" type="audio/mpeg">
-    </audio>
-  </footer>
+      <section class="banner-dos">
+        
+      </section>
 
-  <script src="assets/js/main.js"></script>
-</body>
+      <!-- DRESS CODE -->
+      <section class="dresscode" aria-labelledby="dresscode-heading">
+        <!-- Sección independiente -->
+        <h2 id="dresscode-heading">Dress Code</h2>
+        <p>Vestimenta formal en tonos dorados y blancos</p>
+      </section>
+
+      <!-- FORMULARIO RSVP -->
+      <section class="formulario-rsvp">
+        <div class="container-elegante">
+          <h2>CONFIRMÁ TU ASISTENCIA</h2>
+          <p class="fecha-limite">ANTES DEL <strong>15 DE OCTUBRE</strong></p>
+
+          <form id="rsvpForm" novalidate>
+            <div class="grupo-invitados">
+              <label>¿Por cuántas personas confirmarás?</label>
+              <select
+                id="num-personas"
+                name="num-personas"
+                class="select-elegante"
+              >
+                <option value="1">1 persona</option>
+                <option value="2">2 personas</option>
+                <option value="3">3 personas</option>
+              </select>
+            </div>
+
+            <!-- Campos dinámicos para cada invitado -->
+            <div id="campos-invitados">
+              <div class="invitado">
+                <h3>Persona 1</h3>
+                <div class="form-group">
+                  <label for="nombre1"></label>
+                  <input
+                    type="text"
+                    id="nombre1"
+                    name="nombre1"
+                    required
+                    class="input-elegante"
+                    placeholder="Nombre"
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="apellido1"></label>
+                  <input
+                    type="text"
+                    id="apellido1"
+                    name="apellido1"
+                    required
+                    class="input-elegante"
+                    placeholder="Apellido"
+                  />
+                </div>
+                <div class="form-group">
+                  <label>¿Algún requerimiento en la alimentación?</label>
+                  <select name="alimentacion1" class="select-elegante">
+                    <option value="ninguno">Ninguno</option>
+                    <option value="vegetariano">Vegetariano</option>
+                    <option value="vegano">Vegano</option>
+                    <option value="sin-gluten">Sin gluten</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="musica1">Recomendar música</label>
+              <input
+                type="text"
+                id="musica1"
+                name="musica1"
+                placeholder="Ej: Canción o artista"
+                class="input-elegante"
+              />
+            </div>
+
+            <button type="submit" class="btn-confirmar">Confirmar</button>
+          </form>
+        </div>
+      </section>
+
+      <!-- COUNTDOWN -->
+      <aside class="countdown" aria-labelledby="countdown-heading">
+        <!-- <aside> para contenido secundario -->
+        <h2 id="countdown-heading">Cuenta Regresiva</h2>
+        <div id="contador-dias" role="timer">
+          <!-- role="timer" para accesibilidad -->
+          Faltan <span id="dias-restantes">X</span> días para el evento.
+        </div>
+      </aside>
+
+      <section class="foto">
+        <h2>Quiero ver tus fotos</h2>
+        <p>
+          PUEDEN USAR MI # EN TODAS SUS PUBLICACIONES DE INSTAGRAM #luaxFest
+        </p>
+      </section>
+    </main>
+
+    <!-- MÚSICA - Mejor en footer -->
+    <footer class="musica" role="contentinfo">
+      <button id="toggle-music" aria-label="Reproducir/Pausar música de fondo">
+        ♪
+      </button>
+      <audio id="background-music" loop>
+        <source src="assets/music/soundtrack.mp3" type="audio/mpeg" />
+      </audio>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+  </body>
 </html>
