@@ -1,0 +1,256 @@
+/* RESET BÁSICO */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Montserrat", sans-serif; /* Usa Google Fonts */
+  background-color: #fff;
+  line-height: 1.6;
+}
+
+/* PORTADA CON VIDEO */
+.portada {
+  position: relative;
+  height: 100vh; /* Altura completa de la pantalla */
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.portada video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Cubre todo el espacio sin deformar */
+  z-index: -1; /* Para que el contenido quede encima */
+}
+
+.contenido-portada {
+  position: relative;
+  z-index: 10;
+  padding: 0 20px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.contenido-portada h1 {
+  font-size: 4rem;
+  margin-bottom: 1rem;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+.contenido-portada p {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+  text-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+/* EFECTO OVERLAY (opcional) */
+.portada::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.3); /* Oscurece el video para mejor legibilidad */
+}
+/* 1. Variables y fuentes */
+:root {
+  --color-primario: #6fb878; /* Dorado */
+  --color-secundario: #fff;
+  --color-fondo: #8a8a8a;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap");
+
+/* 2. Reset y estilos generales */
+/* (Usa el reset de arriba) */
+
+/* 3. Portada */
+/* (Usa el código de portada de arriba) */
+
+/* 4. Secciones comunes */
+section {
+  padding: 4rem 2rem;
+  background: var(--color-fondo);
+  text-align: center;
+  padding: auto;
+  margin-bottom: 3rem;
+}
+
+h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  color: var(--color-primario);
+}
+
+.info-detalles {
+  margin: 1.5rem;
+}
+
+/* 5. Formulario RSVP */
+/* CONTENEDOR PRINCIPAL */
+.formulario-rsvp {
+  background: #9c7b7b; /* Fondo beige claro */
+  padding: 3rem;
+  border-radius: 10px;
+  width: 100%;
+  margin: 2rem auto;
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.1);
+}
+
+.container-elegante {
+  font-family: 'Playfair Display', serif; /* Fuente elegante */
+  color: white;
+  text-align: center;
+}
+
+/* TÍTULOS */
+.formulario-rsvp h2 {
+  font-size: 1.8rem;
+  letter-spacing: 2px;
+  margin-bottom: 0.5rem;
+  color: white; /* Dorado oscuro */
+  text-transform: uppercase;
+}
+
+.fecha-limite {
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+  color: #666;
+}
+
+/* BOTÓN "VER VALOR TARJETA" */
+.btn-valor {
+  display: inline-block;
+  margin-bottom: 2rem;
+  color: red;
+  text-decoration: underline;
+  font-size: 0.9rem;
+}
+
+/* CAMPOS DEL FORMULARIO */
+.grupo-invitados {
+  margin-bottom: 2rem;
+}
+
+.grupo-invitados label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+}
+
+.invitado {
+  background: #9c7b7b;
+  padding: 1.5rem;
+  border-radius: 8px;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+}
+
+.invitado h3 {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  color: #8b6b4a;
+  text-align: left;
+}
+
+.form-group {
+  margin-bottom: 1.2rem;
+  text-align: left;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.3rem;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.input-elegante, .select-elegante {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  background: #fff;
+  font-family: 'Montserrat', sans-serif;
+  transition: all 0.3s;
+}
+
+.input-elegante:focus, .select-elegante:focus {
+  border-color: #8b6b4a;
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(139, 107, 74, 0.2);
+}
+
+/* BOTÓN DE CONFIRMAR */
+.btn-confirmar {
+  background: #8b6b4a;
+  color: white;
+  border: none;
+  padding: 12px 30px;
+  font-size: 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.3s;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-top: 1rem;
+}
+
+.btn-confirmar:hover {
+  background: #6e5438;
+  transform: translateY(-2px);
+}
+
+button,
+.btn {
+  background: var(--color-primario);
+  color: #000;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.3s;
+}
+
+button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(212, 175, 55, 0.4);
+}
+
+.contenido-portada {
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
