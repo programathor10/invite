@@ -7,62 +7,61 @@
       content="Invitación digital para los XV años de Lua"
     />
     <link rel="stylesheet" href="assets/css/styles.css" />
+
     <title>Invitación XV Años | Lua</title>
   </head>
   <body>
-    <!-- PORTADA -->
-    <header class="portada" role="banner">
-      <video
-        autoplay
-        muted
-        loop
-        playsinline
-        aria-label="Video de fondo de la invitación"
-      >
-        <source
-          src="https://cdn.pixabay.com/video/2023/10/02/183279-870457579_large.mp4"
-          type="video/mp4"
-        />
-        <img
-          src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1200&q=80"
-          alt="Decoración elegante para fiesta de XV"
-        />
-      </video>
-      <div class="contenido-portada">
-        <h1>¡Estás Invitado!</h1>
-        <p>Acompáñanos a celebrar un día especial</p>
-      </div>
-    </header>
 
+<header class="hero">
+  <div class="container">
+    <h1 class="brand">MIS 15</h1>
+    <h2 class="display">LUANA</h2>
+    <p class="subtitle">Te invito a celebrar conmigo ✨</p>
+  </div>
+</header>
     <main>
-      <!-- CUÁNDO -->
-      <section class="informacion" aria-labelledby="info-heading">
-        <h2 id="info-heading">¿Cuándo?</h2>
-        <div class="info-detalles">
-          <p>6 de Diciembre de 2025</p>
-          <p>20:00 hrs</p>
-          <p>Salón de Eventos</p>
-        </div>
-        <a href="#rsvpForm" class="btn">Confirmar Asistencia</a>
-      </section>
-
-      <!-- UBICACIÓN -->
-      <section class="ubicacion" aria-labelledby="ubicacion-heading">
-        <h2 id="ubicacion-heading">Ubicación del Evento</h2>
-        <address>
-          Salón de Eventos Las Gardenias<br />Av. Principal 1234<br />Ciudad,
-          País
-        </address>
-        <div class="mapa">
-          <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d820.668093194867!2d-58.861510730340285!3d-34.63771879489828!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bc93d9a39823f1%3A0x452ea846ba3d14bd!2sDiario%20la%20Nacion%202202%2C%20B1746FNH%20Francisco%20Alvarez%2C%20Provincia%20de%20Buenos%20Aires!5e0!3m2!1ses-419!2sar!4v1756401316884!5m2!1ses-419!2sar"
-            width="100%"
-            height="250"
-            style="border: 0"
-            allowfullscreen
-            loading="lazy"
+      <!-- REGALOS -->
+      <div class="gift">
+        <h2>Regalos</h2>
+        <p class="muted">
+          Nada es más importante que tu presencia, pero si deseas hacerme un
+          presente puedes depositarlo en la siguiente cuenta:
+        </p>
+        <p>
+          <span
+            id="giftAlias"
+            class="pill"
+            title="Tocá para copiar"
+            style="cursor: pointer"
+            >LUANA.CUMPLE15</span
           >
-          </iframe>
+        </p>
+      </div>
+
+      <!-- INFORMACIÓN -->
+      <section class="section">
+        <div class="conteriner">
+          <h3 class="section-title">¿Cuando y Donde?</h3>
+          <div class="grid-2">
+            <article class="card info-card">
+              <h4 class="card-title">Cuando</h4>
+              <p>6 de Diciembre de 2025</p>
+              <p>20:00 hrs</p>
+            </article>
+            <article class="card info-card">
+              <h4 class="card-title">Donde</h4>
+              <p>Diario la Nacion 2202</p>
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d820.668093194867!2d-58.861510730340285!3d-34.63771879489828!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bc93d9a39823f1%3A0x452ea846ba3d14bd!2sDiario%20la%20Nacion%202202%2C%20B1746FNH%20Francisco%20Alvarez%2C%20Provincia%20de%20Buenos%20Aires!5e0!3m2!1ses-419!2sar!4v1756401316884!5m2!1ses-419!2sar"
+                width="100%"
+                height="250"
+                style="border: 0"
+                allowfullscreen=""
+                loading="lazy"
+              >
+              </iframe>
+            </article>
+          </div>
         </div>
       </section>
 
@@ -80,16 +79,13 @@
           <form id="rsvpForm" novalidate>
             <div class="grupo-invitados">
               <label>¿Por cuántas personas confirmarás?</label>
-              <select
-                id="num-personas"
-                name="num-personas"
-                class="select-elegante"
-              >
-                <option value="1">1 persona</option>
+              <select id="num-personas" name="num-personas" class="select-menu">
+                <option value="1" selected>1 persona</option>
                 <option value="2">2 personas</option>
                 <option value="3">3 personas</option>
                 <option value="4">4 personas</option>
                 <option value="5">5 personas</option>
+                <option value="0">No podre asistir</option>
               </select>
             </div>
             <div id="campos-invitados">
@@ -105,22 +101,13 @@
                 required
                 class="input-elegante"
               />
-              <select class="select-elegante">
-                <option value="ninguno">Ninguno</option>
+              <select class="select-menu">
                 <option value="vegetariano">Vegetariano</option>
                 <option value="vegano">Vegano</option>
-                <option value="sin-gluten">Sin gluten</option>
+                <option value="sin-gluten">celiaco</option>
+                <option value="hipertension">hipertension</option>
+                <option value="diabetes">diabetes</option>
               </select>
-            </div>
-            <div class="form-group">
-              <label for="musica1">Recomendar música</label>
-              <input
-                type="text"
-                id="musica1"
-                name="musica1"
-                placeholder="Ej: Canción o artista"
-                class="input-elegante"
-              />
             </div>
             <button type="submit" class="btn-confirmar">Confirmar</button>
             <a id="whatsapp-btn" class="btn-wsp" target="_blank"
@@ -130,14 +117,32 @@
         </div>
       </section>
 
-      <!-- COUNTDOWN -->
+      <section class="section">
+        <div class="container">
+          <div id="countdown" class="countdown">
+            <div class="pill">
+              <span class="num" id="dd">96</span><span class="lbl">días</span>
+            </div>
+            <div class="pill">
+              <span class="num" id="hh">22</span><span class="lbl">horas</span>
+            </div>
+            <div class="pill">
+              <span class="num" id="mm">56</span><span class="lbl">minutos</span>
+            </div>
+            <div class="pill">
+              <span class="num" id="ss">02</span><span class="lbl">segundos</span>
+            </div>
+          </div>
+        </div>
+      </section> 
+      <!-- COUNTDOWN
       <aside class="countdown">
         <h2>Cuenta Regresiva</h2>
         <div id="contador">
           <span id="dias"></span> días • <span id="horas"></span> horas •
           <span id="minutos"></span> min • <span id="segundos"></span> seg
         </div>
-      </aside>
+      </aside>-->
 
       <!-- FOTO -->
       <section class="foto">
